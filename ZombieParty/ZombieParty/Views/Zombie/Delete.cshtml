@@ -1,0 +1,66 @@
+@model ZombieParty.Models.ZombieVM
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Effacer</h1>
+
+<h3>Es-tu sûr de vouloir effacer ce zombie?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zombie.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zombie.Name)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zombie.ShortDesc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zombie.ShortDesc)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zombie.Point)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zombie.Point)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zombie.ZombieTypeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zombie.ZombieTypeId)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zombie.ZombieType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zombie.ZombieType)
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zombie.HuntingLogs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zombie.HuntingLogs)
+        </dd>
+    </dl>
+    <form asp-action="Effacer">
+        <input type="hidden" asp-for="Zombie.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Retourner</a>
+    </form>
+</div>
