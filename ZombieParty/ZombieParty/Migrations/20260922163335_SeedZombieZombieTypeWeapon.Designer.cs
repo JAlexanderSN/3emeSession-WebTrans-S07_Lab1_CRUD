@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ZombieParty.Models.Data;
 
@@ -11,9 +12,11 @@ using ZombieParty.Models.Data;
 namespace ZombieParty.Migrations
 {
     [DbContext(typeof(ZombiePartyDbContext))]
-    partial class ZombiePartyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260922163335_SeedZombieZombieTypeWeapon")]
+    partial class SeedZombieZombieTypeWeapon
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,18 +125,6 @@ namespace ZombieParty.Migrations
                             Name = "Master Shield",
                             Price = 500m,
                             Qty = 30,
-                            QtyBought = 1
-                        },
-                        new
-                        {
-                            WeaponId = 3,
-                            CreatedDate = new DateTime(1000, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "La espada de los mil caidos",
-                            Force = 1000m,
-                            Image = "https://img.magnific.com/premium-psd/excalibur-sword-stone-isolated-transparent-background_879541-1688.jpg",
-                            Name = "Excaliburg",
-                            Price = 550m,
-                            Qty = 6,
                             QtyBought = 1
                         });
                 });
